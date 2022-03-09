@@ -10,8 +10,8 @@ body {
     margin: auto;
     display: flex;
     justify-content: space-between;
-    height: 200px;
 }
+
 .header_logo {
     flex-grow: 2;
     margin-left: 50px;
@@ -39,6 +39,11 @@ body {
     font-family: 'Poppins', sans-serif;
     color: white;
     position: absolute;
+}
+@media screen and (max-width: 1400px) {
+    .search {
+        margin: 0;
+    }
 }
 .header_cart {
     flex-grow: 2;
@@ -140,6 +145,7 @@ body {
     -ms-flex: 3;
     flex: 3;
     flex-direction: row;
+    padding-left: 12px;
 }
 .main_h3 {
     height: 60px;
@@ -178,7 +184,7 @@ body {
 .card_img img {
     width: 100%;
     height: 100%;
-    object-fit: fill;
+    object-fit: contain;
     margin-left: 42px;
 }
 .card_title, .card_price {
@@ -228,10 +234,12 @@ body {
     font-weight: bold;
 }
 .card_img:hover {
-    height: 450px;
-    width: 320px;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
     transition: 1s;
+    transform: translateY(-20px);
+    margin-top: 20px;
     margin-left: -42px;
 }
 .card_action button:hover {
@@ -242,9 +250,11 @@ body {
 }
 .footer {
     background-color: #272d40;
-    height: 400px;
+    /* height: 400px; */
     color: white;
-    margin-top: 100px; 
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
 }
 .footer_left {
     text-align: center;
@@ -269,7 +279,7 @@ body {
     border-top: 2px white solid;
     margin-left: 20px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1400px) {
     .content_row, .navbarr, .header, .footer {   
       flex-direction: column;
     }
