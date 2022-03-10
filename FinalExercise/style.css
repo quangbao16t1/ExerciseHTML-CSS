@@ -12,9 +12,11 @@ body {
     display: flex;
     justify-content: space-between;
 }
-
+.info {
+    margin-right: 10px;
+}
 .header_logo {
-    flex-grow: 2;
+    flex-grow: 3;
     margin-left: 50px;
 }
 .header_logo img{
@@ -23,17 +25,17 @@ body {
     border-radius: 50%;
 }
 .search {
-    flex-grow: 6;
-    margin-top: 55px;
-    margin-left: 140px;
+    flex-grow: 5;
 }
 .search input {
     height: 40px;
     width: 350px;
+    margin-top: 55px;
 }
 .search button{
     height: 40px;
     width: 150px;
+    margin-top: 55px;
     border-radius: 10px;
     font-size: 25px;
     background: #272d40;
@@ -41,16 +43,11 @@ body {
     color: white;
     position: absolute;
 }
-@media screen and (max-width: 1400px) {
-    .search {
-        margin: 0;
-    }
-}
 .header_cart {
     flex-grow: 2;
     font-family: 'Poppins', sans-serif;
     margin-top: 55px;
-    float: left;
+    margin-right: 0;
     font-size: 30px;
 }
 .header_cart span {
@@ -76,8 +73,10 @@ body {
 .navbarr a {
     text-decoration: none;
 }
-/* .catalogy {
-    float: left;
+/* .navbarr .menu {
+    float: left;    
+    font-size: 40px;
+    transform: translate(-50px, -10px);
 } */
 
 .navbarr li :hover {
@@ -85,13 +84,10 @@ body {
 }
 
 .content_row {
-    display: -webkit-flex;
+    display:flex;
     width: 100%;
     flex-wrap: wrap;
     padding: 10px;
-}
-.column {
-    height: 1000px;
 }
 .column.side {
     -webkit-flex: 1;
@@ -150,11 +146,32 @@ body {
 }
 .main_h3 {
     height: 60px;
-    width: 320px;
-    background: #272d40;
+    width: 100%;
     color: white;
-    padding: 5px;
     margin-left: 5px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px #272d40 solid;
+    margin-bottom: 5px;
+    transform: translateY(-8px);
+}
+.main_h3 h3 {
+    border-top: 1px #272d40 solid;
+    border-left: 1px #272d40 solid;
+    border-right: 1px #272d40 solid;
+    transform: translateY(9px);
+    padding: 5px;
+    background-color: #272d40;
+}
+.main_h3 a {
+    transform: translateY(20px);
+    margin-right: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.main_h3 a:hover {
+    color: #272d40;
 }
 .card {
     height: 450px;
@@ -283,5 +300,12 @@ body {
 @media screen and (max-width: 700px) {
     .content_row, .navbarr, .header, .footer {   
       flex-direction: column;
+      justify-content: center;
+      justify-items: center;
+    }
+  }
+@media screen and (max-width: 1400px) {
+    .search {   
+      transform: scale(0.8)
     }
   }
