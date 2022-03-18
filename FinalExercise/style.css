@@ -34,7 +34,7 @@ body {
 }
 .search button{
     height: 40px;
-    width: 150px;
+    /* width: 150px; */
     margin-top: 55px;
     border-radius: 10px;
     font-size: 25px;
@@ -64,7 +64,7 @@ body {
     text-align: right;
 }
 .navbarr li {
-    display: inline-block;
+    display: inline;
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
     color: blue;
@@ -267,7 +267,6 @@ body {
 }
 .footer {
     background-color: #272d40;
-    /* height: 400px; */
     color: white;
     margin-top: 100px;
     display: flex;
