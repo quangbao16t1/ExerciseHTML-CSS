@@ -82,6 +82,29 @@ body {
    cursor: pointer;
    padding: 0 20px;
 }
+.chartsi {
+    display: flex;
+    flex-direction: column;
+    background-color: darkgray;
+    transform: translate(60px, -80px);
+    width: 100px;
+    justify-content: flex-start;
+    padding-left: 15px;
+    visibility: hidden;
+}
+.chartsi a {
+    text-decoration: none;
+    display: block;
+    color: black;
+    font-size: 13px;
+    margin: 10px 0;
+}
+.chartsi i {
+    margin-right: 5px;
+}
+.chartsi a:hover {
+    color: #1890FF;
+}
 .slibar_content li {
    margin: 4px 0;
    font-size: 16px;

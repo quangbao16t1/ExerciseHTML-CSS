@@ -31,9 +31,14 @@
                     <li>
                         <i class='bx bx-cart-add' ></i>
                     </li>
-                    <li >
+                    <li id="liHiddenChart" onmouseover="openChart()" >
                             <i class='bx bx-chart' ></i>
                     </li>
+                    <div class="chartsi" id="chartsi" onmouseleave="hiddenChart()" onmouseover="overLiChart()">
+                        <a href="#"><i class="fa-solid fa-chart-line"></i>ECharts</a>
+                        <a href="#"><i class="fa-solid fa-chart-column"></i>HighCharts</a>
+                        <a href="#"><i class="fa-solid fa-chart-area"></i>Rechartst</a>
+                    </div>
                 </ul>
             </div>
 
