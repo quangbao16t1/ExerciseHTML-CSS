@@ -1,10 +1,16 @@
+var countSubmenu = 0;
 function openSubMenu() {
     const x = document.getElementById("submenu");
-    if(x.style.display === "none") {
-        document.getElementById("dropdown").style.transform = "transform: rotate(180deg);"
+    if(countSubmenu %2 == 0) {
+        document.getElementById("dropdown").style.display = "none";
+        document.getElementById("dropup").style.display = "block";
         x.style.display = "block";
+        countSubmenu ++;
     } else {
         x.style.display = "none";
+        document.getElementById("dropdown").style.display = "block"
+        document.getElementById("dropup").style.display = "none"
+        countSubmenu ++;
     }
 }
 

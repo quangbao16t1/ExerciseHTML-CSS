@@ -147,6 +147,13 @@ body {
 }
 .fa-chevron-down {
     transform: translateX(70px);
+    z-index: 2;
+    /* display: none; */
+}
+.fa-chevron-up {
+    transform: translateX(70px);
+    z-index: 0;
+    display: none;
 }
 .submenu a {
     display: block;
