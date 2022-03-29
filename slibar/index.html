@@ -22,10 +22,10 @@
             </div> 
             <div class="slibar_hidden" id="slibar_hidden">
                 <ul>
-                    <li class="active" id="active">
+                    <li >
                         <i class='bx bxs-dashboard'></i>
                     </li>
-                    <li>
+                    <li class="active" id="active">
                         <i class='bx bx-user' ></i>
                     </li>
                     <li>
@@ -43,14 +43,14 @@
             </div>
 
             <div class="slibar_content" id="slibar_content">
-                <ul>
-                    <li class="active">
+                <ul class="ullll">
+                    <li >
                         <i class='bx bxs-dashboard'></i>
                         <a href="#">Dashboard</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <i class='bx bx-user' ></i>
-                        <a href="#">User</a>
+                        <a href="#" style="color: blue;">User</a>
                     </li>
                     <li>
                         <i class='bx bx-cart-add' ></i>
@@ -63,14 +63,38 @@
                             <i class="fa-solid fa-chevron-down" id="dropdown" ></i>
                             <i class="fa-solid fa-chevron-up" id="dropup" ></i>
                         </div>
-                        <div class="submenu" id="submenu">
+                        <div class="submenu" id="submenu" onclick="stopProp(event)" >
                             <a href="#"><i class="fa-solid fa-chart-line"></i>ECharts</a>
                             <a href="#"><i class="fa-solid fa-chart-column"></i>HighCharts</a>
-                            <a href="#"><i class="fa-solid fa-chart-area"></i>Rechartst</a>
+                            <div class="liSubChar" onclick="openSubChart()">
+                                <div class="link">
+                                    <a href="#"><i class="fa-solid fa-chart-area"  ></i>Rechartst</a>
+                                    <i class='bx bxs-chevron-down' id="dropdown2"></i>
+                                    <i class='bx bxs-chevron-up' id="dropup2" ></i>
+                                </div>
+                                <div class="subchart" id="subchart"  onclick="stopProp(event)" >
+                                    <a href="#"><i class="fa-solid fa-chart-line"></i>ECharts</a>
+                                    <a href="#"><i class="fa-solid fa-chart-line"></i>ECharts</a>
+                                    <a href="#"><i class="fa-solid fa-chart-line"></i>ECharts</a>
+                                </div>
+                            </div>
                         </div>
                     </li>
                     
                 </ul>
+            </div>
+            <div class="dartmode" id="dartmode">
+                <li class="mode">
+                    <span class="switch-theme">
+                        <i class='bx bx-bulb'> Switch theme</i>
+                    </span>
+                    <div class="toggle-switch" onchange="dartMode()">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round" id="slideRound">&emsp;&nbsp;Light</span>
+                          </label>
+                    </div>
+                </li>
             </div>
         </div>
         <div class="main">
