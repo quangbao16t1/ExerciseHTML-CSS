@@ -26,7 +26,6 @@ function openSubChart() {
         x.style.display = "none";
         document.getElementById("dropdown2").style.display = "block"
         document.getElementById("dropup2").style.display = "none"
-        // document.getElementById("dropup2").style.transform = "translateX(10px)";
         countSubChart ++;
     }
 }
@@ -38,10 +37,13 @@ function stopProp(event) {
 }
 var count = 0;
 function eventSibar() {
+    const body = document.querySelector('body');
+    toggle = body.querySelector('.toggle');
     if(count % 2 == 0) {
         document.getElementById("slibar_content").style.display = "none";
         document.getElementById("slibar_logo").style.display = "none";
-        document.getElementById("slibar_hidden").style.visibility = "visible";
+        // document.getElementById("slibar_hidden").style.visibility = "visible";
+        toggle.style.visibility = "visible";
         document.getElementById("slibar_hidden").style.width = "60px";
         document.getElementById("silogo").style.visibility = "visible";
         document.getElementById("silogo").style.width = "60px";
@@ -76,8 +78,7 @@ function overLiChart() {
 var dem = 0;
 function dartMode() {
     const body = document.querySelector('body'),
-    sidebar = body.querySelector('.slibar'),
-    modeSwitch = sidebar.querySelector(".switch");
+    sidebar = body.querySelector('.slibar');
     // document.getElementById("switch").style.transition = "tras"
    if(dem %2 == 0) {
         document.getElementById("slibar").style.backgroundColor = "black";

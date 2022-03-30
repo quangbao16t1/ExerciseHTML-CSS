@@ -100,7 +100,7 @@ body {
     width: 100px;
     justify-content: flex-start;
     padding-left: 15px;
-    /* visibility: hidden; */
+    visibility: hidden;
     z-index: 4;
 }
 .chartsi a {
