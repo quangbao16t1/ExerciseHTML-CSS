@@ -78,12 +78,14 @@ function overLiChart() {
 var dem = 0;
 function dartMode() {
     const body = document.querySelector('body'),
+    header = document.querySelector('.header'),
     sidebar = body.querySelector('.slibar');
     // document.getElementById("switch").style.transition = "tras"
    if(dem %2 == 0) {
         document.getElementById("slibar").style.backgroundColor = "black";
         sidebar.style.color = "white";
         document.getElementById("slideRound").innerHTML = "&nbsp;Dark";    
+        header.style.backgroundColor = 'black';
         const a =  sidebar.querySelectorAll("a,i");
         for(let i = 0; i< a.length; i++) {
             a[i].style.color = "white";
