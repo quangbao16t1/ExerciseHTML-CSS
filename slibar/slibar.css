@@ -12,7 +12,7 @@
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
+    font-size: 1rem;
    }
 body {
     height: 100vh;
@@ -29,11 +29,19 @@ body {
     box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
     /* overflow: hidden; */
 }
+/* .dark {
+    background-color: black;
+    color: white;
+}
+.dark a, i {
+    background-color: black;
+    color: white;
+} */
 .slibar_logo {
     color: #1890FF;
     display: flex;
     font-weight: bold;
-    height: 80px;
+    height: 60px;
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 0 0 rgb(0 0 0 / 20%);
@@ -46,7 +54,7 @@ body {
 }
 .silogo {
     display: flex;
-    height: 80px;
+    height: 60px;
     align-items: center;
     justify-content: center;
     /* box-shadow: 0 0 0 0 rgb(0 0 0 / 20%); */
@@ -91,15 +99,15 @@ body {
    align-items: center;
    cursor: pointer;
    padding: 0 20px;
+   width: 60px;
 }
 .chartsi {
     display: flex;
     flex-direction: column;
     background-color: darkgray;
-    transform: translate(60px, -80px);
+    transform: translate(65px, -80px);
     width: 100px;
     justify-content: flex-start;
-    padding-left: 15px;
     visibility: hidden;
     z-index: 4;
 }
@@ -108,13 +116,16 @@ body {
     display: block;
     color: black;
     font-size: 13px;
-    margin: 10px 0;
+    height: 30px;
+    padding-top: 6px;
+    padding-left: 5px;
 }
 .chartsi i {
     margin-right: 5px;
 }
 .chartsi a:hover {
-    color: #1890FF;
+    background-color: #1890FF;
+    color: blue;
 }
 .slibar_content li {
    margin: 4px 0;
@@ -137,23 +148,16 @@ body {
     background-color: #3eb9d8;
     color: blue;
 }
-.active a {
-    color: blue;
-
-}
 .slibar_content a i {
     transform: translateY(1px);
     margin-right: 10px;
-}
-.slibar_content a:hover {
-    color: blue;
 }
 .lichart {
     position: relative;
     width: 100%;
 }
 .submenu {
-    width: 211px;
+    width: 200px;
     display: none;
     position: absolute;
     transform: translate(-50px, 85px);
@@ -167,9 +171,7 @@ body {
     color: #d9d9d9;
     font-size: 14px;
     padding-top: 7px;
-}
-.submenu a:hover {
-    background: #3eb9d8;
+    margin-top: 2px;
 }
 .link {
     display: flex;
@@ -179,13 +181,17 @@ body {
 .linkk {
     display: flex;
     align-items: center;
-    width: 228px;
+    width: 216px;
 }
 .subchart a:hover {
     border-right: 2px blue solid;
+    background: #3eb9d8;
+    color: blue;
 }
 .submenu a:hover {
     border-right: 2px blue solid;
+    background: #3eb9d8;
+    color: blue;
 }
 .fa-chevron-down {
     transform: translateX(70px);
@@ -198,10 +204,10 @@ body {
     display: none;
 }
 .bxs-chevron-down {
-    transform: translateX(-42px);
+    transform: translateX(-32px);
 }
 .bxs-chevron-up {
-    transform: translateX(-41px);
+    transform: translateX(-31px);
     display: none;
 }
 .subchart {
@@ -213,28 +219,87 @@ body {
     text-decoration: none;
     color: #d9d9d9;
     font-size: 14px;
-    width: 211px;
+    width: 200px;
     padding-left: 90px;
+    margin-top: 2px;
 }
 .slibar_content a {
     text-decoration: none;
     color: black;
 }
+/* .dark {
 
+} */
 .main {
     flex-grow: 15;
 }
 .header {
     box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
-    height: 80px;  
+    height: 60px;  
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 .header-left {
     font-size: 30px;
     width: 60px;
     display: flex;
     justify-content: center;
+}
+.header-right {
+    display: flex;
+    align-items: center;
+}
+.header-right img {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.notice  {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+.notice:hover {
+    background-color: #ccc;
+}
+.language {
+    margin: 0 20px;
+    cursor: pointer;
+}
+.notice {
+    font-size: 30px;
+}
+.coco {
+    visibility: visible;
+}
+.flag {
+    display: block;
+    position: absolute;
+    transform: translate(50px, 80px);
+    background: #ccc;
+    visibility: hidden;
+    z-index: 2;
+
+}
+
+.flag a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    margin: 10px 15px;
+}
+.flag a:hover {
+    color: #2196F3;
+}
+.logout  {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
 }
 .mode {
     bottom: 0;

@@ -80,12 +80,10 @@ function dartMode() {
     const body = document.querySelector('body'),
     header = document.querySelector('.header'),
     sidebar = body.querySelector('.slibar');
-    // document.getElementById("switch").style.transition = "tras"
    if(dem %2 == 0) {
-        document.getElementById("slibar").style.backgroundColor = "black";
+        sidebar.style.backgroundColor = "black";
         sidebar.style.color = "white";
         document.getElementById("slideRound").innerHTML = "&nbsp;Dark";    
-        header.style.backgroundColor = 'black';
         const a =  sidebar.querySelectorAll("a,i");
         for(let i = 0; i< a.length; i++) {
             a[i].style.color = "white";
@@ -102,3 +100,23 @@ function dartMode() {
     dem ++;    
    }
 }
+function languageOver() {
+    const element = document.getElementById('flag');
+    // element.classList.add('coco');
+    element.style.visibility = 'visible';
+}
+function languageMove() {
+    const element = document.getElementById('flag');
+    // element.classList.add('coco');
+    element.style.visibility = 'hidden';
+}
+
+var ulActive = document.querySelector(".ullll");
+const activeLi = ulActive.querySelectorAll(".acti");
+activeLi.forEach((element) => {
+    element.addEventListener("click", () => {
+        const currentActive = document.getElementsByClassName("active");
+        currentActive[0].className = currentActive[0].classList.remove("active");
+        element.classList.add("active");
+        });
+});

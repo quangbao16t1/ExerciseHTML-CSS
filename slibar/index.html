@@ -7,12 +7,11 @@
     <script src="https://kit.fontawesome.com/cbb355e312.js" crossorigin="anonymous"></script>
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="slibar.css">
-    <script src="slibar.js"></script>
     <title>Document</title>
 </head>
 <body>
     <div class="row">
-        <div class="slibar " id="slibar">
+        <div class="dark slibar " id="slibar">
             <div class="slibar_logo" id="slibar_logo">
                 <img src="logo.svg" alt="">
                 <h1>ANTD ADMIN</h1>
@@ -44,19 +43,18 @@
 
             <div class="toggle slibar_content" id="slibar_content">
                 <ul class="ullll">
-                    <li >
+                    <li class="acti">
                         <i class='bx bxs-dashboard'>Dashboard</i>
                         <a href="#"></a>
                     </li>
-                    <li class="active">
+                    <li class="acti active">
                         <i class='bx bx-user' >User</i>
-                        <a href="#" style="color: blue;"></a>
                     </li>
-                    <li>
+                    <li class="acti">
                         <i class='bx bx-cart-add' >Posts</i>
                         <a href="#"></a>
                     </li>
-                    <li class="lichart" onclick="openSubMenu()">
+                    <li class="acti lichart" onclick="openSubMenu()">
                         <div class="link">
                             <i class='bx bx-chart' >Charts</i>
                             <a href="#"></a>
@@ -64,18 +62,18 @@
                             <i class="fa-solid fa-chevron-up" id="dropup" ></i>
                         </div>
                         <div class="submenu" id="submenu" onclick="stopProp(event)" >
-                            <a href="#"><i class="fa-solid fa-chart-line"></i>ECharts</a>
-                            <a href="#"><i class="fa-solid fa-chart-column"></i>HighCharts</a>
-                            <div class="liSubChar" onclick="openSubChart()">
+                            <a class="acti" href="#"><i class="fa-solid fa-chart-line"></i>ECharts</a>
+                            <a class="acti" href="#"><i class="fa-solid fa-chart-column"></i>HighCharts</a>
+                            <div class="acti liSubChar" onclick="openSubChart()">
                                 <div class="linkk">
                                     <a href="#"><i class="fa-solid fa-chart-area"  ></i>Rechartst</a>
                                     <i class='bx bxs-chevron-down' id="dropdown2"></i>
                                     <i class='bx bxs-chevron-up' id="dropup2" ></i>
                                 </div>
                                 <div class="subchart" id="subchart"  onclick="stopProp(event)" >
-                                    <a href="#"><i class="fa-solid fa-chart-line"></i>ECharts</a>
-                                    <a href="#"><i class="fa-solid fa-chart-line"></i>ECharts</a>
-                                    <a href="#"><i class="fa-solid fa-chart-line"></i>ECharts</a>
+                                    <a class="acti" href="#"><i class="fa-solid fa-chart-line"></i>ECharts</a>
+                                    <a class="acti" href="#"><i class="fa-solid fa-chart-line"></i>ECharts</a>
+                                    <a class="acti" href="#"><i class="fa-solid fa-chart-line"></i>ECharts</a>
                                 </div>
                             </div>
                         </div>
@@ -100,16 +98,23 @@
         <div class="main">
             <div class="header">
                 <div class="header-left">
-                    <i class='bx bx-left-indent' onclick="eventSibar()"></i>
+                    <i class='bx bx-left-indent' style="font-size: 25px;" onclick="eventSibar()"></i>
                 </div>
-                <!-- <div class="header-right">
-                    <span class="notice"><i class='bx bx-bell'></i></span>
-                    <span class="language"></span>
+                <div class="header-right">
+                    <div class="notice">
+                        <span class="notice"><i class='bx bx-bell'></i></span>
+                    </div>
+                    <span class="language"><img src="america.svg" alt="" onmouseover= "languageOver()"></span>
+                    <div class="coco flag" id="flag" onmouseleave="languageMove()">
+                        <a href="#"><i class="fa-solid fa-chart-line"></i>ECharts</a>
+                        <a href="#"><i class="fa-solid fa-chart-column"></i>HighCharts</a>
+                        <a href="#"><i class="fa-solid fa-chart-area"></i>Rechartst</a>
+                    </div>
                     <div class="logout">
                         <span>Hi,Name</span>
-                        <img src="" alt="">
+                        <img src="gai-xinh-toc-ngan-facebook.jpg" alt="">
                     </div>
-                </div> -->
+                </div>
 
             </div>
             <div class="dashboard">
@@ -117,5 +122,7 @@
             </div>
         </div>
     </div>
+    <script src="slibar.js"></script>
+ 
 </body>
 </html>
