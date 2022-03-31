@@ -83,6 +83,8 @@ body {
     z-index: 1;
     visibility: hidden;
     position: absolute;
+    transform: translateY(-15px);
+
 }
 .slibar_hidden li:hover {
     border-right: 2px blue solid;
@@ -213,6 +215,10 @@ body {
 .subchart {
     display: block;
     position: absolute;
+}
+.dark {
+    background-color: black;
+    color: white;
 }
 .subchart a {
     display: block;

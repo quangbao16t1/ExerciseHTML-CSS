@@ -81,8 +81,8 @@ function dartMode() {
     header = document.querySelector('.header'),
     sidebar = body.querySelector('.slibar');
    if(dem %2 == 0) {
-        sidebar.style.backgroundColor = "black";
-        sidebar.style.color = "white";
+        sidebar.classList.add('dark');
+        // sidebar.style.color = "white";
         document.getElementById("slideRound").innerHTML = "&nbsp;Dark";    
         const a =  sidebar.querySelectorAll("a,i");
         for(let i = 0; i< a.length; i++) {
@@ -90,8 +90,7 @@ function dartMode() {
         }
         dem ++;
    } else {
-    document.getElementById("slibar").style.backgroundColor = "white";
-    sidebar.style.color = "black";
+    sidebar.classList.remove("dark");
     document.getElementById("slideRound").innerHTML = "&emsp;&nbsp;Light"; 
     const a =  sidebar.querySelectorAll("a,i");
     for(let i = 0; i< a.length; i++) {
@@ -111,7 +110,7 @@ function languageMove() {
     element.style.visibility = 'hidden';
 }
 
-var ulActive = document.querySelector(".ullll");
+var ulActive = document.querySelector(".slibar");
 const activeLi = ulActive.querySelectorAll(".acti");
 activeLi.forEach((element) => {
     element.addEventListener("click", () => {
