@@ -15,12 +15,13 @@ function doB(ms) {
 }
 
 const controller = async () => {
-    const timeoutScheduled = Date.now();
+    const timeRun = Date.now();
     doA(3000);
     await doB(1000);
-    console.log(new Date().getTime() - timeoutScheduled);
+    console.log(new Date().getTime() - timeRun);
 };
-
-controller();
-controller();
-controller();
+async () => {
+    await controller();
+    await controller();
+    await controller();
+}
