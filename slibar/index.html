@@ -16,60 +16,40 @@
                 <img src="logo.svg" alt="">
                 <h1>ANTD ADMIN</h1>
             </div> 
-            <div class="silogo" id="silogo">
-                <img src="logo.svg" alt="">
-            </div> 
-            <div class="toggle slibar_hidden" id="slibar_hidden">
-                <ul>
+           
+            <div class=" slibar_content" id="slibar_content">
+                <ul class="ullll">
                     <li class="acti">
                         <i class='bx bxs-dashboard'></i>
+                        <a href="#">Dashboard</a>
                     </li>
                     <li class="acti active">
                         <i class='bx bx-user' ></i>
+                        <a href="">User</a>
                     </li>
                     <li class="acti">
                         <i class='bx bx-cart-add' ></i>
+                        <a href="#">Posts</a>
                     </li>
-                    <li class="acti" id="liHiddenChart" onmouseover="openChart()" >
-                            <i class='bx bx-chart' ></i>
-                    </li>
-                    <div class="chartsi" id="chartsi" onmouseleave="hiddenChart()" onmouseover="overLiChart()">
-                        <a href="#"><i class="fa-solid fa-chart-line"></i>ECharts</a>
-                        <a href="#"><i class="fa-solid fa-chart-column"></i>HighCharts</a>
-                        <a href="#"><i class="fa-solid fa-chart-area"></i>Rechartst</a>
-                    </div>
-                </ul>
-            </div>
-
-            <div class="toggle slibar_content" id="slibar_content">
-                <ul class="ullll">
-                    <li class="acti">
-                        <i class='bx bxs-dashboard'>Dashboard</i>
-                        <a href="#"></a>
-                    </li>
-                    <li class="acti active">
-                        <i class='bx bx-user' >User</i>
-                    </li>
-                    <li class="acti">
-                        <i class='bx bx-cart-add' >Posts</i>
-                        <a href="#"></a>
-                    </li>
-                    <li class="acti lichart" onclick="openSubMenu()">
-                        <div class="link">
-                            <i class='bx bx-chart' >Charts</i>
-                            <a href="#"></a>
-                            <i class="fa-solid fa-chevron-down" id="dropdown" ></i>
-                            <i class="fa-solid fa-chevron-up" id="dropup" ></i>
-                        </div>
-                        <div class="submenu" id="submenu" onclick="stopProp(event)" >
-                            <a class="acti" href="#"><i class="fa-solid fa-chart-line"></i>ECharts</a>
-                            <a class="acti" href="#"><i class="fa-solid fa-chart-column"></i>HighCharts</a>
-                            <div class="acti liSubChar" onclick="openSubChart()">
-                                <div class="linkk">
-                                    <a href="#"><i class="fa-solid fa-chart-area"  ></i>Rechartst</a>
-                                    <i class='bx bxs-chevron-down' id="dropdown2"></i>
-                                    <i class='bx bxs-chevron-up' id="dropup2" ></i>
-                                </div>
+                    <li class="acti lichart" id="lichart">
+                        <i class='bx bx-chart' ></i>
+                        <a href="#">Charts</a>
+                        <i class="fa-solid fa-chevron-down" id="dropdown" ></i>
+                        <i class="fa-solid fa-chevron-up" id="dropup" ></i>  
+                         <div class="chartsi" id="chartsi"  >
+                            <a href="#"><i class="fa-solid fa-chart-line"></i>ECharts</a>
+                            <a href="#"><i class="fa-solid fa-chart-column"></i>HighCharts</a>
+                            <a href="#"><i class="fa-solid fa-chart-area"></i>Rechartst</a>
+                        </div> 
+                        <div class="rightSub submenu" id="submenu" onclick="stopProp(event)" >
+                            <div >
+                                <a class="acti " href="#"><i class="fa-solid fa-chart-line"></i>ECharts</a>
+                            </div>
+                            <div >
+                                <a class="acti "  href="#"><i class="fa-solid fa-chart-column"></i>HighCharts</a>
+                            </div>
+                            <div >
+                                <a class="acti liSubChar" onclick="openSubChart()" href="#"> <i class="fa-solid fa-chart-area"  ></i>Rechartst <i class='bx bxs-chevron-down' id="dropdown2"></i><i class='bx bxs-chevron-up' id="dropup2" ></i></a>
                                 <div class="subchart" id="subchart"  onclick="stopProp(event)" >
                                     <a class="acti" href="#"><i class="fa-solid fa-chart-line"></i>ECharts</a>
                                     <a class="acti" href="#"><i class="fa-solid fa-chart-line"></i>ECharts</a>
@@ -82,7 +62,7 @@
                 </ul>
             </div>
             <div class="dartmode" id="dartmode">
-                <li class="mode">
+                <div class="mode">
                     <span class="switch-theme">
                         <i class='bx bx-bulb'> Switch theme</i>
                     </span>
@@ -92,7 +72,7 @@
                             <span class="slider round" id="slideRound">&emsp;&nbsp;Light</span>
                           </label>
                     </div>
-                </li>
+                </div>
             </div>
         </div>
         <div class="main">

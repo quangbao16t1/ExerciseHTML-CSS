@@ -45,100 +45,70 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 0 0 rgb(0 0 0 / 20%);
-    z-index: 3;
 }
 .slibar_logo img {
     height: 40px;
     width: 40px;
     padding-right: 5px;
 }
-.silogo {
-    display: flex;
-    height: 60px;
-    align-items: center;
-    justify-content: center;
-    /* box-shadow: 0 0 0 0 rgb(0 0 0 / 20%); */
-    position: absolute;
-    z-index: 1;
-    visibility: hidden;
-}
-.silogo img {
-    height: 40px;
-    width: 40px;
-    padding-right: 5px;
-}
+
 .slibar_content ul {
     list-style: none;
     margin: 0;
-    z-index: 2;
-    position: relative;
     color: black;
 }
-.slibar_hidden ul {
-    list-style: none;
-    position: relative;
+.toggle a {
+    display: none;
 }
-.slibar_hidden {
-    margin: 0;
-    z-index: 1;
-    visibility: hidden;
-    position: absolute;
-    transform: translateY(-15px);
-
+.toggle h1 {
+    display: none;
 }
-.slibar_hidden li:hover {
-    border-right: 2px blue solid;
-    background-color: #3eb9d8;
-    color: blue;
+.toggle {
+    display: flex;
+    flex-direction: column;
+    width: 1%;
+    text-align: center;
 }
-.slibar_hidden li {
-    margin: 4px 0;
-   font-size: 16px;
-   /* box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%); */
-   line-height: 1.5s;
-   height: 40px;
-   display: flex;
-   align-items: center;
-   cursor: pointer;
-   padding: 0 20px;
-   width: 60px;
+.toggle ul {
+    align-items: center;
+    padding: 0;
+}
+.toggle li {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
 }
 .chartsi {
+    position: absolute;
     display: flex;
     flex-direction: column;
     background-color: darkgray;
-    transform: translate(65px, -80px);
-    width: 100px;
-    justify-content: flex-start;
-    visibility: hidden;
-    z-index: 4;
+    width:180px;
+    left: 75px;
+    display: none;
 }
 .chartsi a {
     text-decoration: none;
-    display: block;
+    display: flex;
     color: black;
     font-size: 13px;
-    height: 30px;
+    height: 35px;
     padding-top: 6px;
-    padding-left: 5px;
-}
-.chartsi i {
-    margin-right: 5px;
+    padding-left: 20px;
+    align-items: center;
 }
 .chartsi a:hover {
     background-color: #1890FF;
     color: blue;
 }
-.slibar_content li {
+.ullll li {
    margin: 4px 0;
    font-size: 16px;
-   /* box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%); */
-   line-height: 1.7;
    height: 40px;
    display: flex;
    align-items: center;
-   padding-left: 40px;
    cursor: pointer;
+   padding-left: 30px;
 }
 .ullll li:hover {
     color: blue;
@@ -150,40 +120,27 @@ body {
     background-color: #3eb9d8;
     color: blue;
 }
-.slibar_content a i {
-    transform: translateY(1px);
-    margin-right: 10px;
-}
-.lichart {
+/* .lichart {
     position: relative;
     width: 100%;
-}
+} */
 .submenu {
-    width: 200px;
-    display: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    transform: translate(-50px, 85px);
+    left: 0;
+    top: 237px;
 }
 .submenu a {
     padding-left: 70px;
-    width: 100%;
     height: 40px;
-    display: block;
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: #d9d9d9;
-    font-size: 14px;
-    padding-top: 7px;
-    margin-top: 2px;
-}
-.link {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-.linkk {
-    display: flex;
-    align-items: center;
-    width: 216px;
+    font-size: 16px;
+    margin-top: 3px;
 }
 .subchart a:hover {
     border-right: 2px blue solid;
@@ -196,38 +153,48 @@ body {
     color: blue;
 }
 .fa-chevron-down {
-    transform: translateX(70px);
+    position: absolute;
+    right: 10px;
     z-index: 2;
-    /* display: none; */
 }
 .fa-chevron-up {
-    transform: translateX(70px);
+    position: absolute;
+    right: 10px;
     z-index: 0;
     display: none;
 }
 .bxs-chevron-down {
-    transform: translateX(-32px);
+    position: absolute;
+    right: 10px;
 }
 .bxs-chevron-up {
-    transform: translateX(-31px);
+    position: absolute;
+    right: 10px;
     display: none;
 }
+.lisubchart {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 .subchart {
-    display: block;
-    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.subchart a {
+    padding-left: 100px;
+    width: 100%;
+    height: 40px;
+    text-decoration: none;
+    color: #d9d9d9;
+    font-size: 16px;
+    margin-top: 3px;
 }
 .dark {
     background-color: black;
     color: white;
-}
-.subchart a {
-    display: block;
-    text-decoration: none;
-    color: #d9d9d9;
-    font-size: 14px;
-    width: 200px;
-    padding-left: 90px;
-    margin-top: 2px;
 }
 .slibar_content a {
     text-decoration: none;

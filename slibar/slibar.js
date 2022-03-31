@@ -1,4 +1,5 @@
 var countSubmenu = 0;
+
 function openSubMenu() {
     const x = document.getElementById("submenu");
     if(countSubmenu %2 == 0) {
@@ -13,6 +14,8 @@ function openSubMenu() {
         countSubmenu ++;
     }
 }
+
+document.getElementById("lichart").addEventListener("click", openSubMenu);
 
 var countSubChart = 0;
 function openSubChart() {
@@ -38,42 +41,47 @@ function stopProp(event) {
 var count = 0;
 function eventSibar() {
     const body = document.querySelector('body');
-    toggle = body.querySelector('.toggle');
+    const toggle = body.querySelector('.slibar');
+    lichat =  document.getElementById("lichart");
+    const liAll = toggle.querySelectorAll("li");
+    // console.log(liAll);
     if(count % 2 == 0) {
-        document.getElementById("slibar_content").style.display = "none";
-        document.getElementById("slibar_logo").style.display = "none";
-        // document.getElementById("slibar_hidden").style.visibility = "visible";
-        toggle.style.visibility = "visible";
-        document.getElementById("slibar_hidden").style.width = "60px";
-        document.getElementById("silogo").style.visibility = "visible";
-        document.getElementById("silogo").style.width = "60px";
-        document.getElementById("slibar_hidden").style.marginTop = "80px"
-        document.getElementById("dartmode").style.display = "none"
+        toggle.classList.add("toggle");
+        toggle.querySelector(".submenu").style.display = "none";
+        lichat.removeEventListener("click", openSubMenu);
+        lichat.addEventListener("mouseover", openChart);
+        lichat.addEventListener("mouseleave", overLiChart);
+        // console.log()
+        document.getElementById("dartmode").style.display = "none";
+        document.getElementById("dropdown").style.display = "none";
+        document.getElementById("dropup").style.display = "none";
+        liAll.forEach((element) => {
+            element.style.paddingLeft = "0";
+        })
         count++;
     } else {
-        document.getElementById("slibar_content").style.display = "block";
-        document.getElementById("slibar_logo").style.display = "flex";
-        document.getElementById("slibar_hidden").style.visibility = "hidden";
-        document.getElementById("silogo").style.visibility = "hidden";
+        toggle.classList.remove("toggle");
+        lichat.addEventListener("click", openSubMenu);
+        lichat.removeEventListener("mouseover", openChart);
+        lichat.removeEventListener("mouseleave", overLiChart);
         document.getElementById("dartmode").style.display = "flex";
+        document.getElementById("dropdown").style.display = "block";
+        document.getElementById("dropup").style.display = "none";
+        liAll.forEach((element) => {
+            element.style.paddingLeft = "30px";
+        })
         count++;
     }
 }
 function openChart() {
-    document.getElementById("chartsi").style.visibility = "visible";
+    console.log('openChart')
+    document.getElementById("chartsi").style.display = "flex";
 }
 function hiddenChart() {
-    document.getElementById("chartsi").style.visibility = "hidden";
-    const lii = document.getElementById("liHiddenChart");
-    lii.style.borderRight ="unset";
-    lii.style.backgroundColor = "unset";
-    lii.style.color = "unset";
+    document.getElementById("chartsi").style.display = "none";
 }
 function overLiChart() {
-    const lii = document.getElementById("liHiddenChart");
-    lii.style.borderRight ="2px blue solid";
-    lii.style.backgroundColor = "#3eb9d8";
-    lii.style.color = "blue";
+    document.getElementById("chartsi").style.display = "none";
 }
 var dem = 0;
 function dartMode() {
