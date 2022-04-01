@@ -96,6 +96,7 @@ body {
     padding-top: 6px;
     padding-left: 20px;
     align-items: center;
+    color: black;
 }
 .chartsi a:hover {
     background-color: #1890FF;
