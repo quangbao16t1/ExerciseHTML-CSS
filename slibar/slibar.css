@@ -27,16 +27,7 @@ body {
     height: 100vh;
     position: relative;
     box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
-    /* overflow: hidden; */
 }
-/* .dark {
-    background-color: black;
-    color: white;
-}
-.dark a, i {
-    background-color: black;
-    color: white;
-} */
 .slibar_logo {
     color: #1890FF;
     display: flex;
@@ -55,9 +46,18 @@ body {
 .slibar_content ul {
     list-style: none;
     margin: 0;
-    color: black;
 }
-.toggle a {
+.slibar_content li:hover {
+    color: blue;
+    border-right: 2px blue solid;
+    background-color: #3eb9d8;
+}
+/* .ullll li:hover {
+    color: blue;
+    border-right: 2px blue solid;
+    background-color: #3eb9d8;
+} */
+.toggle p {
     display: none;
 }
 .toggle h1 {
@@ -84,13 +84,13 @@ body {
     flex-direction: column;
     background-color: darkgray;
     width:180px;
-    left: 75px;
+    margin-left: 1%;
+    left: 100%;
     display: none;
 }
 .chartsi a {
     text-decoration: none;
     display: flex;
-    color: black;
     font-size: 13px;
     height: 35px;
     padding-top: 6px;
@@ -110,23 +110,20 @@ body {
    cursor: pointer;
    padding-left: 30px;
 }
-.ullll li:hover {
-    color: blue;
-    border-right: 2px blue solid;
-    background-color: #3eb9d8;
-}
+
 .active {
     border-right: 2px blue solid;
     background-color: #3eb9d8;
     color: blue;
 }
-/* .lichart {
-    position: relative;
-    width: 100%;
+/* .hover {
+    border-right: 2px blue solid;
+    background-color: #3eb9d8;
+    color: blue;
 } */
 .submenu {
     width: 100%;
-    display: flex;
+    display: none;
     flex-direction: column;
     position: absolute;
     left: 0;
@@ -138,9 +135,9 @@ body {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #d9d9d9;
     font-size: 16px;
     margin-top: 3px;
+    color: black;
 }
 .subchart a:hover {
     border-right: 2px blue solid;
@@ -185,10 +182,10 @@ body {
 }
 .subchart a {
     padding-left: 100px;
+    color: black;
     width: 100%;
     height: 40px;
     text-decoration: none;
-    color: #d9d9d9;
     font-size: 16px;
     margin-top: 3px;
 }
@@ -196,12 +193,12 @@ body {
     background-color: black;
     color: white;
 }
-.slibar_content a {
+.dark a {
+    color: white;
+}
+/* .slibar_content a {
     text-decoration: none;
     color: black;
-}
-/* .dark {
-
 } */
 .main {
     flex-grow: 15;

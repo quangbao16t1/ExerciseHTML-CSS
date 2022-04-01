@@ -1,11 +1,12 @@
 var countSubmenu = 0;
 
 function openSubMenu() {
+    console.log(countSubmenu);
     const x = document.getElementById("submenu");
     if(countSubmenu %2 == 0) {
         document.getElementById("dropdown").style.display = "none";
         document.getElementById("dropup").style.display = "block";
-        x.style.display = "block";
+        x.style.display = "flex";
         countSubmenu ++;
     } else {
         x.style.display = "none";
@@ -88,22 +89,18 @@ function dartMode() {
     const body = document.querySelector('body'),
     header = document.querySelector('.header'),
     sidebar = body.querySelector('.slibar');
+    liHover = document.querySelector(".lichart");
    if(dem %2 == 0) {
         sidebar.classList.add('dark');
-        // sidebar.style.color = "white";
+        sidebar.style.color = "white";
         document.getElementById("slideRound").innerHTML = "&nbsp;Dark";    
-        const a =  sidebar.querySelectorAll("a,i");
-        for(let i = 0; i< a.length; i++) {
-            a[i].style.color = "white";
-        }
+        // liHover.querySelectorAll("a,i").style.color = "white";
         dem ++;
    } else {
     sidebar.classList.remove("dark");
+    sidebar.style.color = "black";
     document.getElementById("slideRound").innerHTML = "&emsp;&nbsp;Light"; 
-    const a =  sidebar.querySelectorAll("a,i");
-    for(let i = 0; i< a.length; i++) {
-        a[i].style.color = "black";
-    }
+    // liHover.querySelectorAll("a,i").style.color = "dark";
     dem ++;    
    }
 }
@@ -127,3 +124,16 @@ activeLi.forEach((element) => {
         element.classList.add("active");
         });
 });
+
+
+
+// var liHover = document.querySelector(".lichart");
+// const aMouseover = liHover.querySelectorAll(".over");
+// console.log(aMouseover);
+// aMouseover.forEach((element) => {
+//     element.addEventListener("mouseover", () => {
+//         const currentHover = document.getElementsByClassName("hover");
+//         currentHover[0].className = currentHover[0].classList.remove("hover");
+//         element.classList.add("hover");
+//         });
+// });
