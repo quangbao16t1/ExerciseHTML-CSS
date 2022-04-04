@@ -78,6 +78,12 @@ function openChart() {
     console.log('openChart')
     document.getElementById("chartsi").style.display = "flex";
 }
+function openChartHidden() {
+    document.getElementById("chartsiHidden").style.display = "flex";
+}
+function closeChartHidden() {
+    document.getElementById("chartsiHidden").style.display = "none";
+}
 function hiddenChart() {
     document.getElementById("chartsi").style.display = "none";
 }

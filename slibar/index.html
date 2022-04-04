@@ -43,7 +43,16 @@
                          <div class="chartsi" id="chartsi"  >
                             <a href="#"><i class="fa-solid fa-chart-line"></i>ECharts</a>
                             <a href="#"><i class="fa-solid fa-chart-column"></i>HighCharts</a>
-                            <a href="#"><i class="fa-solid fa-chart-area"></i>Rechartst</a>
+                            <div >
+                                <div onmouseover="openChartHidden()">
+                                    <a href="#"><i class="fa-solid fa-chart-area" ></i>Rechartst</a>
+                                </div>
+                                <div class="chartsiHidden" id="chartsiHidden" onmouseleave="closeChartHidden()">
+                                    <a class="acti over" href="#"><i class="fa-solid fa-chart-line"></i>ECharts</a>
+                                    <a class="acti over" href="#"><i class="fa-solid fa-chart-line"></i>ECharts</a>
+                                    <a class="acti over" href="#"><i class="fa-solid fa-chart-line"></i>ECharts</a>
+                                </div>
+                            </div>
                         </div> 
                         <div class="rightSub submenu" id="submenu" onclick="stopProp(event)" >
                             <div >

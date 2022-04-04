@@ -87,6 +87,7 @@ body {
     margin-left: 1%;
     left: 100%;
     display: none;
+    transform: translateY(35px);
 }
 .chartsi a {
     text-decoration: none;
@@ -101,6 +102,26 @@ body {
 .chartsi a:hover {
     background-color: #1890FF;
     color: blue;
+}
+.chartsiHidden {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    background-color: darkgray;
+    width:180px;
+    margin-left: 1%;
+    left: 100%;
+    transform: translateY(-35px);
+}
+.chartsiHidden a {
+    text-decoration: none;
+    display: flex;
+    font-size: 13px;
+    height: 35px;
+    padding-top: 6px;
+    padding-left: 20px;
+    align-items: center;
+    color: black;
 }
 .ullll li {
    margin: 4px 0;
